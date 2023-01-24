@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    background-color: #E8EBF7;
+}
+
+.navegador ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: #ACBED8;
+    height: 100%;
+    position: fixed; 
+    overflow: auto; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navegador li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navegador li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navegador li a:hover:not(.active) {
+    color: white;
+    align-items: center;
+}
+
+.navegador img {
+    border: 5px solid darkblue;
+}
+
+.navegador ul img {
+    align-items: center;
+    margin: 10px 20% 10px 20%;
+}
+
+.pages{
+    margin-left:25%;
+    padding:1px 16px;
+    height:1000px;
+}
+
+.titulos{
+    color: #090446;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.parrafos{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+div.box{
+    margin: 10px 50px;
+    box-shadow: 0 4px 8px 0 blue, 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    float: left;
+    width: 350px;
+}
+div.box img{
+    width: 100%;
+    height: auto;
+}
+div.box:hover{
+    border: 1px solid blue;
+    transform: rotate(-3deg);
+}
+div.pie1{
+    text-align: center;
+    padding: 10px;
+}
+
+div.galeria{
+    margin: 10px 50px;
+    box-shadow: 0 4px 8px 0 lightblue, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    width: 350px;
+}
+
+div.galeria img{
+    width: 100%;
+    height: auto;
+}
+
+div.galeria:hover{
+    border: 1px solid lightcoral;
+    transform: rotate(-3deg);
+}
+
+div.pie{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+    padding: 10px;
+}
+
+:root{
+    --bar-color: royalblue;
+    --fill-size: 0%;
+}
+
+.progress-bar{
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: white;
+    border-radius: 2em;
+    overflow: hidden;
+}
+.progress-bar::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bar-color);
+    transform: translateX(-100%);
+    animation: fill-bar 0.8s 0.3s ease-in-out forwards;
+}
+
+.progress-bar2{
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background-color: white;
+    border-radius: 2em;
+    overflow: hidden;
+}
+.progress-bar2::before{
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    background-color: var(--bar-color);
+    transform: translateX(-100%);
+    animation: fill-bar 0.8s 0.3s ease-in-out forwards;
+}
+
+@keyframes fill-bar{
+    to{
+        transform: translateX(var(--fill-size));
+    }
+}
